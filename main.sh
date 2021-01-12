@@ -52,22 +52,19 @@ else
 fi
 
 #check if you used variables $1 & $2 correctly
-if [ -z "$1" ]; then
-echo ' '
-else
-	if [ "$1" -eq "install" ] && [ "$2" -eq "-pa" ]
-	then echo "you can't use option 1 'install' and option 2 '-pa'!"
-	else echo ' '
-	fi
-	if [ "$1" -eq "remove" ] && [ "$2" -eq "-p" ]
-	then echo "you can't use option 1 'remove' and option 2 '-p'!"
-	else echo ' '
-	fi
-	if [ "$1" -eq "remove" ] && [ "$2" -eq "-c" ]
-	then echo "you can't use option 1 'remove' and option 2 '-c'!"
-	else echo ' '
-	fi
-fi
+#if [ "$1" -eq "install" ] && [ "$2" -eq "-pa" ]
+#then echo "you can't use option 1 'install' and option 2 '-pa'!"
+#else echo ' '
+#fi
+#if [ "$1" -eq "remove" ] && [ "$2" -eq "-p" ]
+#then echo "you can't use option 1 'remove' and option 2 '-p'!"
+#else echo ' '
+#fi
+#if [ "$1" -eq "remove" ] && [ "$2" -eq "-c" ]
+#then echo "you can't use option 1 'remove' and option 2 '-c'!"
+#else echo ' '
+#fi
+
 #third variable - package
 if [[ $3 = "box86" ]]; then
 	PACKAGE="box86"
