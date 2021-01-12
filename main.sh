@@ -14,8 +14,8 @@ elif [[ $2 = "-p" ]]; then
 	echo "installing pre-compiled version..."
 fi
 
-if [[ $2 = "-pa" ]]
-	echo "123"
+if [[ $2 = "-pa" ]]: then
+	echo " "
 fi
 
 if [[ $3 = "box86" ]]; then
@@ -29,4 +29,6 @@ if [[ $1 == "install" ]]; then
 elif [[ $1 == "remove" ]]; then
 	echo "removing $PACKAGE"
 fi
+
+
 
