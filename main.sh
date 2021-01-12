@@ -35,7 +35,7 @@ elif [[ $1 = "--help" ]]; then
 	'
 	exit
 else
-	echo -e "${bold}}$(tput setaf 1) ERROR: no operation selected! ${normal}"
+	echo -e "${bold}$(tput setaf 1) ERROR: no operation selected! ${normal}"
 	exit
 fi
 
@@ -44,7 +44,7 @@ if [[ $2 = "-c" ]]; then
 	echo "compiling from source..."
 elif [[ $2 = "-p" ]]; then
 	echo "installing pre-compiled version..."
-elif [[ $2 = "-pa" ]]: then
+elif [[ $2 = "-pa" ]]; then
 	echo " "
 else
 	echo -e "${bold}$(tput setaf 1) ERROR: select -p or -c! ${normal}}"
