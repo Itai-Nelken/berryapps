@@ -1,7 +1,7 @@
 # berryapps
-app store for the raspberry pi with useful apps.
+berryapps is a simple "package manager" for apps not in the repositories.
 
 ## this project is still in development, so things might not work.
+the goal is to be able to use this app like `apt`, usage will be something like this: `berry install box86` to install a precompiled version of box86 or `berry install --compile box86` to compile it from source.
 
-the goal is to create a gui with a list of useful apps (that can or can't be installed with 'apt install') for starters to 
-the pi and linux command line, and everyone else.
+berryapps will make use of existing projects, and just make them easy to access.
