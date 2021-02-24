@@ -1,3 +1,6 @@
+# NOTE: this project isn't being worked on and might be deleted or archived. see [this](https://github.com/techcoder20/PiAppsPackageManagerTerminal) for a very similar project.
+<br>
+
 # berryapps
 berryapps is a simple "package manager" for apps not in the repositories.
 
