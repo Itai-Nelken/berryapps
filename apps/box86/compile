@@ -2,6 +2,12 @@
 
 . ./info.sh || source info.sh
 
+if [[ "${PI_MODEL}" == *"Raspberry Pi"* ]]; then
+  RPI="RPI4"
+else
+  error "This is not a supported device. currently only the RPi 4 is supported!"
+fi
+
 if [[ "$RPI_MODEL" =~ [RaspberryPi4] ]]; then
     RPI="RPI4"
 else
