@@ -14,3 +14,4 @@ mkdir build; cd build; cmake .. -D$RPI=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
 make -j$(nproc)
 sudo make install
 sudo systemctl restart systemd-binfmt
+echo "compiled" > $BERRY_DIR/data/status/box86

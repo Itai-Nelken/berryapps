@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ./info.sh || source info.sh
+
 sudo rm -f /etc/apt/sources.list.d/box86.list
 echo "adding box86 repo..."
 sudo wget https://itai-nelken.github.io/weekly-box86-debs/debian/box86.list -O /etc/apt/sources.list.d/box86.list || error "Failed to download /etc/apt/sources.list.d/box86.list"
@@ -9,4 +11,4 @@ echo "running 'sudo apt update'..."
 sudo apt update || error "Failed to run sudo apt update"
 echo "installing box86..."
 sudo apt install box86 -y || error "Failed to install the box86 package"
-
+echo "installed" > $BERRY_DIR/data/status/box86
