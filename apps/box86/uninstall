@@ -1,0 +1,18 @@
+#!/bin/bash
+
+STATUS="$(cat $BERRY_DIR/data/status/box86)"
+
+function uninstall-compiled() {
+    cd ~/box86 || error "Failed to change directory to \"$HOME/box86\"!"
+    sudo make uninstall || error "Failed to run \"sudo make uninstall\"!"
+}
+
+if [[ "$STATUS" == "compiled" ]]; then
+    uninstall-compiled
+elif [[ "$STATUS" == "installed" ]]; then
+    #Uninstallation commands
+    echo "not implemented yet"
+else
+    echo "box86 isn't installed" | yad --text-info --button=Cancel
+    exit 0
+fi

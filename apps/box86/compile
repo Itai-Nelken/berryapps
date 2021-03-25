@@ -1,0 +1,16 @@
+#!/bin/bash
+
+. ./info.sh || source info.sh
+
+if [[ "$RPI_MODEL" =~ [RaspberryPi4] ]]; then
+    RPI="RPI4"
+else
+    error "Unsuported hardware detected!\nThis script currently only supports the rpi4."
+fi
+
+git clone https://github.com/ptitSeb/box86
+cd box86
+mkdir build; cd build; cmake .. -D$RPI=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo
+make -j$(nproc)
+sudo make install
+sudo systemctl restart systemd-binfmt
