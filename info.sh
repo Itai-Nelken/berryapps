@@ -2,7 +2,7 @@
 
 #variables
 BERRY_DIR="$HOME/berryapps"
-RPI_MODEL="$(grep Raspberry* /proc/cpuinfo)"
+RPI_MODEL="$(grep ^Model /proc/cpuinfo  | cut -d':' -f2- | sed 's/ R/R/')"
 
 #text formatting variables
 red="\e[31m"
