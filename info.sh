@@ -25,3 +25,7 @@ function error() {
   echo -e "${red}$1${normal}"
   exit 1
 }
+
+function warning {
+  echo -e "${yellow}$1${normal}"
+}
